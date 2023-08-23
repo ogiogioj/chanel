@@ -19,6 +19,12 @@
   align-items: center;
 }
 
+.customer__textbox .customer__text form .input__window .log {
+  width: 250px;
+  justify-content: space-between;
+  display: flex;
+}
+
 .customer__textbox .customer__text form .input__window input {
   font-size: 15px;
   width: 400px;
@@ -53,6 +59,7 @@
   display: block;
   font-size: 13px;
   cursor: pointer;
+
 }
 
 .customer__textbox .customer__text form #submit__button {
