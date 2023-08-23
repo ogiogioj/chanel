@@ -3,18 +3,22 @@
 
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>list_man</title>
-  <link rel="stylesheet" href="./css/reset.css" />
-  <link rel="stylesheet" href="./css/list.css" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/main.css" />
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/header.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+    integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="./js/script.js"></script>
 </head>
 
 <body>
   <div class="header">
     <div class="title">
-      <h1 class="logo"><a href="/index.html">CHANEL</a></h1>
+      <h1 class="logo"><a href="../index.html">CHANEL</a></h1>
       <div class="icons">
         <div id="my-form" class="invisible">
           <form action="#">
@@ -83,62 +87,87 @@
         <li><a href="#">샤넬 소개</a></li>
       </ul>
     </div>
-  </div>
-  <div class="banner">
-    <h2>남성 향수</h2>
-    <p>
-      가브리엘 샤넬의 삶은 운명적인 만남으로 더욱 풍성해졌습니다. 샤넬은
-      운명적인 만남에서 영감을 받아 풍부한 상상력과 과감한 매력이 공존하는
-      샤넬 남성 향수를 선보입니다. 남성 향수의 향기를 품은 바스 & 바디, 쉐이빙
-      제품도 만나볼 수 있습니다.
-    </p>
-  </div>
-
-  <div class="list">
-    <!-- <ul>
-        <li>
-          <ul>
-            <li>
-              <img
-                src="./source/detail/bluedechanel_eau_de_parfum.jpg"
-                alt=""
-              />
-            </li>
-            <li>name</li>
-            <li>lineup</li>
-            <li>price + 원 부터</li>
-            <li>장바구니에추가</li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-    <div class="banner row">
-      <div>
-        <h3></h3>
-        <p></p>
-        <span></span>
+    <!-- <div class="nav">
+        <a>하이라이트</a>
+        <a>향수 컬렉션</a>
+        <a>부티크 서비스</a>
+        <a>화인 주얼리</a>
+        <a>여성 향수</a>
+        <a>남성 향수</a>
+        <a>바스 & 바디</a>
+        <a>샤넬 소개</a>
       </div> -->
   </div>
-  <div id="ex" class="row">
-    <div class="extra">
-      <a href="#">
-        <ul class="content">
-          <li>
-            <img src="./source/index/onemineur_800x1300.jpg" alt="" />
-          </li>
-          <li>특별한 디테일</li>
-          <li>자세히 보기</li>
-        </ul>
-      </a>
-      <a href="#">
-        <ul class="content">
-          <li>
-            <img src="./source/index/specialeditions_800x1300.jpg" alt="" />
-          </li>
-          <li>스페셜 에디션</li>
-          <li>자세히 보기</li>
-        </ul>
-      </a>
+  <div class="customer__section">
+
+    <h1>회원가입</h1>
+    <div class="customer__content">
+      <form action="#">
+        <div class="text__form">
+          <label for="user__id">ID
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__id" type="text" placeholder="아이디를 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__password">PW
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__password" type="password" placeholder="비밀번호를 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__password__confirm">PW Confirm
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__password__confirm" type="password" placeholder="비밀번호를 다시 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__gender">Gender
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__gender__confirm" type="text" placeholder="성별을 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__first__name">First Name
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__first__name" type="text" placeholder="이름을 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__last__name">Last Name
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__last__name" type="text" placeholder="성을 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__tell">Tell
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__tell" type="text" placeholder="전화번호를 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__nickname">Nickname
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__nickname" type="text" placeholder="닉네임을 입력해주세요" />
+        </div>
+        <div class="text__form">
+          <label for="user__email">E-mail
+            <span class="message"></span>
+            <div class="line"></div>
+          </label>
+          <input id="user__email" type="email" placeholder="이메일을 입력해주세요" />
+        </div>
+        <button id="submit__button" type="submit">회원가입 완료</button>
+      </form>
     </div>
   </div>
   <article id="mainfooter">
