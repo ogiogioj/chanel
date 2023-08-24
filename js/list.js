@@ -5,18 +5,20 @@ function usedata(pname) {
   let ulli = `<ul>`;
   newdata.forEach((value) => {
     ulli += `<li>`;
-    ulli += `<div>`;
+    ulli += `<div class="list row">`;
     ulli += `<a href="./detail.html"/?${value.name}&${value.lineup}&${value.price}&${value.size}&${value.image}">`;
     ulli += `<img src="./source/detail/${value.image}" alt="${value.name}"/>`;
     ulli += `<p class="name">${value.name}</p>`;
     ulli += `<p class="lineup">${value.lineup}</p>`;
-    ulli += `<p class="price">${value.price} + 원부터</p>`;
+    ulli += `<p class="price">${value.price[0]}원부터</p>`;
     ulli += `</a>`;
-    ulli += `<p>장바구니에 추가</p>`;
+    ulli += `<p><span>장바구니에 추가</span></p>`;
     ulli += `</div>`;
     ulli += `</li>`;
   });
-  ulli += "</ul>";
+  ulli += `</ul>`;
+  ulli += `<div class="undimg"><img src="./source/index/onemineur_800x1300.jpg" alt=""></div>`;
+
   $(".list ul").remove();
   $(".list").append(ulli);
 }
