@@ -63,6 +63,15 @@
       "price": "51000",
       "size": "100ml",
       "image": "bluedechanel_deodrant.jpg"
+    },
+
+    {
+      "name": "향수",
+      "lineup": "데오드란트 스프레이",
+      "refer": "107930",
+      "price": "51000",
+      "size": "100ml",
+      "image": "bluedechanel_deodrant.jpg"
     }
   ],
   "woman": [
