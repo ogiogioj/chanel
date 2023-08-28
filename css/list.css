@@ -54,13 +54,13 @@
     line-height: 2.3;
 }
 
-.list ul li>div>p>span {
+.list ul li>div>p>a {
     transition: all 0.3s;
     border-bottom: 3px solid #ddd;
     padding-bottom: 5px;
 }
 
-.list ul li>div>p>span:hover {
+.list ul li>div>p>a:hover {
     border-bottom: 3px solid #333;
 }
 

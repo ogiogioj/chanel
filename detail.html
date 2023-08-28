@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chanel</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/chanel.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer type="module" src="./js/showCase.js"></script>
+    <script defer src="js/header.js"></script>
+</head>
+
+<body>
+
+
+    <script>
+
+        let newItem = {
+
+            name: "블루 드 샤넬",
+            lineup: "빠르펭",
+            refer: "107180",
+            price: ["220000", "158000"],
+            size: ["100ml", "50ml"],
+            image: "bluedechanel_parfum.jpg"
+
+
+
+        }
+
+        let itemList = JSON.parse(localStorage.getItem("allItem"))
+        if (itemList == null) {
+            itemList = []
+        }
+        itemList.push(newItem)
+        localStorage.setItem("allItem", JSON.stringify(itemList))
+
+    </script>
+</body>
+
+</html>
