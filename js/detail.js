@@ -27,7 +27,7 @@ prdInfo += `<input type="text" value="1" autocomplete="off" class="qty__input">`
 prdInfo += `<button type="button" class="qty__plus">+</button>`;
 prdInfo += `</div> `;
 prdInfo += ` </li>`;
-prdInfo += `<li><button type="submit" class="cart">장바구니에 추가하기</button></li>`;
+prdInfo += `<li><button type="button" class="cart">장바구니에 추가하기</button></li>`;
 prdInfo += `</ul>`;
 prdInfo += `</div>`;
 $(".detailBox .prdInfo").remove();
@@ -68,6 +68,7 @@ $("body").on("change", "select[name=size]", function () {
 let sizeValue = $("select[name=size] option:selected").val();
 $("body").on("click", ".cart", function (e) {
   e.preventDefault();
+
   let newItem = {
     name: detail[0],
     lineup: detail[1],
@@ -80,11 +81,8 @@ $("body").on("click", ".cart", function (e) {
   let itemList = JSON.parse(localStorage.getItem("allItem")) || [];
   itemList.push(newItem);
   localStorage.setItem("allItem", JSON.stringify(itemList));
-
-  let btn_class = $(this).attr("class");
-  if (btn_class == "cart") {
+  let ans = confirm("장바구니로 이동하겠습니까?");
+  if (ans) {
     location.href = "./cart.html";
-  } else {
-    location.href = "https://localhost:5502/buy.html";
   }
 });
