@@ -363,7 +363,7 @@
                      <input type="text"  value="${value.quantity}" autocomplete="off" class="btinput">
                     <button type="button" class="bt__plus">+</button>
                      </td>`
-                    trList += `<td><span class="total">${(value.quantity * value.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span><span class="truetotal" style="display:none">${(value.quantity * value.price)}</span>원</td>`
+                    trList += `<td><span class="total">${(value.quantity * value.price).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>원</td>`
                     trList += `<td><button type="button" class="remove"><i class="fa-solid fa-xmark"></i></button></td>`
                     trList += `</tr>`
                     total = total + (value.quantity * value.price)
@@ -442,7 +442,6 @@
             $(this).prev().val(++quantity)
             let totalformat = (quantity * myprice)
             $(this).parent().next().find('.total').text(totalformat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
-            $(this).parent().next().find('.truetotal').text(totalformat)
             mytotal()
 
 
@@ -457,7 +456,7 @@
                 $(this).next().val(--quantity)
                 let totalformat = (quantity * myprice)
                 $(this).parent().next().find('.total').text(totalformat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
-                $(this).parent().next().find('.truetotal').text(totalformat)
+
                 mytotal()
             }
         })
@@ -470,7 +469,7 @@
                 $(this).val(quantity)
                 let totalformat = (quantity * myprice)
                 $(this).parent().next().find('.total').text(totalformat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","))
-                $(this).parent().next().find('.truetotal').text(totalformat)
+
                 mytotal()
             }
         })
@@ -481,9 +480,10 @@
 
         function mytotal() {
             let total = 0;
-            $('.tabpg tbody .truetotal').each(function (index, value) {
-                let rep = parseInt($(this).text())
-                total += rep
+            $('.tabpg tbody .total').each(function (index, value) {
+                let rep = $(this).text()
+                let regex = /[^0-9]/g;
+                total += parseInt(rep.replace(regex, ""))
             })
             let endtotal = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") + "원"
             $('.prtotal span').text(endtotal)
