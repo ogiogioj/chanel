@@ -6,9 +6,9 @@ function usedata(pname) {
   newdata.forEach((value) => {
     ulli += `<li>`;
     ulli += `<div class="list row">`;
-    ulli += `<a href="./detail.html"/?${value.name}&${value.lineup}&${value.price}&${value.size}&${value.image}">`;
+    ulli += `<a href="./detail.html?${value.name}&${value.lineup}&${value.price}&${value.size}&${value.image}">`;
     ulli += `<img src="./source/detail/${value.image}" alt="${value.name}"/>`;
-    ulli += `<p class="name">${value.name}</p>`;
+    ulli += `<p class="name">${value.name}${value.size[0]}</p>`;
     ulli += `<p class="lineup">${value.lineup}</p>`;
     ulli += `<p class="price">${value.price[0]}원부터</p>`;
     ulli += `</a>`;
