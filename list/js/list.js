@@ -12,6 +12,7 @@ function usedata(pname) {
     ulli += `<p class="lineup">${value.lineup}</p>`;
     ulli += `<p class="price">${value.price[0]}원부터</p>`;
     ulli += `</a>`;
+    ulli += `<p><a href="../cart/cart.html"><span class="prdlink">제품정보</span></a></p>`;
     ulli += `</div>`;
     ulli += `</li>`;
   });
