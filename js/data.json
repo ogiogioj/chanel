@@ -36,7 +36,7 @@
       "name": "블루 드 샤넬",
       "lineup": "오 드 뚜왈렛",
       "refer": "107460",
-      "price": ["163000", "120000"],
+      "price": ["163000원", "120000"],
       "size": ["100ml", "50ml"],
       "image": "bluedechanel_eau_de_toilette.jpg"
     },
@@ -71,7 +71,7 @@
       "lineup": "헤어미스트",
       "refer": "116997",
       "price": ["79000", "85000"],
-      "size": "135ml",
+      "size": ["135ml"],
       "image": "cocomadmoiselle_hair_mist.jpg"
     },
     {
