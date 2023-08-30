@@ -111,8 +111,15 @@ $("body").on("click", ".bt__plus", function () {
   let quantity = parseInt($(this).prev().val());
   let myprice = parseInt($(this).parent().prev().find(".price").text());
   console.log(quantity);
-  $(this).prev().val(++quantity);
-  let totalformat = quantity * myprice;
+  let total = 0;
+  if (quantity) {
+    $(this).prev().val(++quantity);
+    totalformat = quantity * myprice;
+  } else {
+    quantity = 1;
+    $(this).prev().val(++quantity);
+    totalformat = quantity * myprice;
+  }
   $(this)
     .parent()
     .next()
@@ -127,15 +134,19 @@ $("body").on("click", ".bt__minus", function () {
     let myprice = parseInt($(this).parent().prev().find(".price").text());
     console.log(quantity);
     $(this).next().val(--quantity);
-    let totalformat = quantity * myprice;
-    $(this)
-      .parent()
-      .next()
-      .find(".total")
-      .text(totalformat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-
-    mytotal();
+    totalformat = quantity * myprice;
+  } else {
+    quantity = 1;
+    $(this).next().val(quantity);
+    totalformat = quantity * myprice;
   }
+  $(this)
+    .parent()
+    .next()
+    .find(".total")
+    .text(totalformat.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+
+  mytotal();
 });
 
 $("body").on("keyup", ".btinput", function () {
