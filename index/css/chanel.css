@@ -11,7 +11,7 @@
 #headbanner .wrap {
   background-image: url(../../source/index/index_headbanner.jpg);
   width: 100%;
-  height: 600px;
+  height: 450px;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   color: #1d1d1d;
@@ -227,6 +227,7 @@ h2 {
 #category > ul > li {
   width: 32%;
   height: 450px;
+  font-weight: 600;
 }
 
 #category > ul > li:hover .list ul li:nth-child(2) {

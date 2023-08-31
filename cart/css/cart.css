@@ -53,13 +53,9 @@
   transition: all 0.5s;
 }
 
-
-
 .cartBox tbody tr {
   border-bottom: 1px solid #1d1d1d;
-
 }
-
 
 .cartBox .tabpg {
   display: flex;
@@ -130,16 +126,12 @@
 
 .thlist {
   font-size: 20px;
-
 }
 
 .thlist th {
   font-weight: 700;
   padding-bottom: 30px;
-
 }
-
-
 
 .valname {
   font-size: 15px;

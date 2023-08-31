@@ -37,15 +37,17 @@ $("body").on("click", ".cart_btn", function (e) {
     image: found.img,
   };
   console.log(newItem);
-  debugger;
   let itemList = JSON.parse(localStorage.getItem("allItem")) || [];
   itemList.push(newItem);
   localStorage.setItem("allItem", JSON.stringify(itemList));
 
   let btn_class = $(this).attr("class");
   if (btn_class == "cart_btn") {
-    location.href = "./cart/cart.html";
-  } else {
-    location.href = "https://localhost:5502/buy.html";
+    var addcart = confirm("장바구니로 이동하시겠습니까?");
+    if (addcart) {
+      location.href = "../cart/cart.html";
+    } else {
+      return false;
+    }
   }
 });
